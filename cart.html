@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Book Land</title>
+
+  <link rel="stylesheet" href="cartt.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<a href="index.html"><img src="bookland_logo.png"></a>
+<div class="card">
+  <div class="row">
+      <div class="col-md-8 cart">
+          <div class="title">
+              <div class="row">
+                  <div class="col"><h4><b>Shopping Cart</b></h4></div>
+                  <div class="col align-self-center text-right text-muted">3 items</div>
+              </div>
+          </div>    
+          <div class="row border-top border-bottom">
+              <div class="row main align-items-center">
+                  <div class="col-2"><img class="img-fluid" src="prod 1"></div>
+                  <div class="col">
+                      <div class="row text-muted">Children Book</div>
+                      <div class="row">Fairy Tale</div>
+                  </div>
+                  <div class="col">
+                      <!-- <a href="#">-</a><a href="#" class="border">3</a><a href="#">+</a> -->
+                      <div class="container">
+                        <input type="button" onclick="decrementValue()" value="-" />
+                        <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="number" />
+                        <input type="button" onclick="incrementValue()" value="+" />
+                        </div>
+                  </div>
+                  <div class="col">&#8377; 130.00 <span class="close">&#10005;</span></div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="row main align-items-center">
+                  <div class="col-2"><img class="img-fluid" src="prod 2"></div>
+                  <div class="col">
+                      <div class="row text-muted">Education Book</div>
+                      <div class="row">Family Wisdom</div>
+                  </div>
+                  <div class="col">
+                      <!-- <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a> -->
+                      <div class="container">
+                        <input type="button" onclick="decrementValue()" value="-" />
+                        <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="number" />
+                        <input type="button" onclick="incrementValue()" value="+" />
+                        </div>
+                  </div>
+                  <div class="col">&#8377; 144.00 <span class="close">&#10005;</span></div>
+              </div>
+          </div>
+          <div class="row border-top border-bottom">
+              <div class="row main align-items-center">
+                  <div class="col-2"><img class="img-fluid" src="prod 3"></div>
+                  <div class="col">
+                      <div class="row text-muted">Fictional Book</div>
+                      <div class="row">The Sun is also a Star</div>
+                  </div>
+                  <div class="col">
+                      <!-- <a href="#">-</a><a href="#" class="border">2</a><a href="#">+</a> -->
+                      <div class="container">
+                        <input type="button" onclick="decrementValue()" value="-" />
+                        <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="number" />
+                        <input type="button" onclick="incrementValue()" value="+" />
+                        </div>
+                  </div>
+                  <div class="col">&#8377; 120.00 <span class="close">&#10005;</span></div>
+              </div>
+          </div>
+          <div class="back-to-shop"><a href="category.html">&leftarrow;</a><span class="text-muted">Back to Store</span></div>
+      </div>
+      <div class="col-md-4 summary">
+          <div><h5><b>Summary</b></h5></div>
+          <hr>
+          <div class="row">
+              <div class="col" style="padding-left:0;"> &nbsp;&nbsp;ITEMS 3</div>
+              <div class="col text-right">&#8377; 394.00</div>
+          </div>
+          <form>
+              <p>SHIPPING</p>
+              <select><option class="text-muted">Standard-Delivery - &#8377;5.00</option></select>
+              <p><br>COUPON CODE</p>
+              <input id="code" placeholder="Enter your code">
+          </form>
+          <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
+              <div class="col">TOTAL PRICE</div>
+              <div class="col text-right">&#8377; 399.00</div>
+          </div>
+          <a href="checkout.html" class="btn btn-warning btn-block">Continue to Checkout</a>
+      </div>
+  </div>
+  
+</div>
+
+<!-- JAVASCRIPT -->
+<body>
+<script type="text/javascript">
+    function incrementValue()
+    {
+        var value = parseInt(document.getElementById('number').value, 10);
+        value = isNaN(value) ? 0 : value;
+        if(value<10){
+            value++;
+                document.getElementById('number').value = value;
+        }
+    }
+    function decrementValue()
+    {
+        var value = parseInt(document.getElementById('number').value, 10);
+        value = isNaN(value) ? 0 : value;
+        if(value>1){
+            value--;
+                document.getElementById('number').value = value;
+        }
+    
+    }
+    </script>
+    </body>
+</html>
